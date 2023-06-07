@@ -25,4 +25,10 @@ public class UserInput {
             else System.out.println("Извините, но это явно не матиматический знак. Попробуйте снова!");
         }
     }
+
+    public static String InputUserString(String message){
+            System.out.print(message + " -> ");
+            Scanner scannerNumber = new Scanner(System.in);
+            return scannerNumber.nextLine();
+    }
 }

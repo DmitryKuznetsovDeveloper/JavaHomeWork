@@ -1,5 +1,7 @@
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         //1) Вычислить сумма чисел от 1 до n
         int userNumber = UserInput.InputUserInt("Введите число до которого будем считать сумму чисел");
         System.out.println("Сумма чисел от 1 до " + userNumber + " = " + MyMethods.SumNumber(userNumber));
@@ -28,5 +30,14 @@ public class Main {
         //элементов с индексами > i.
         int[] array = new int[] {1,7,3,6,5,6};
         MyMethods.FindIindex(array);
+
+        //9)Записать в файл следующие данные:
+        //Name Surname Age
+        //Kate Smith 20
+        //Paul Green 25
+        //Mike Black 23
+        String path = "myFile.txt";
+        MyFile.WriteFile(path);
     }
+
 }
