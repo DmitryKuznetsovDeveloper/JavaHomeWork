@@ -59,7 +59,10 @@ public class MyMethods {
             for (int j = 0; j < array.length; j++) {
                 if (j < i) sumLeft += array[j];
                 if (j > i) sumRight += array[j];
-                if (sumLeft == sumRight) resultIndex = i;
+            }
+            if (sumLeft == sumRight){
+                resultIndex = i;
+                break;
             }
             sumLeft = 0;
             sumRight = 0;
