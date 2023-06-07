@@ -49,5 +49,21 @@ public class MyMethods {
         for (int i = array.length - 1; i >= 0; i--) {
             System.out.print(array[i] + " ");
         }
+        System.out.println();
+    }
+
+    public static void FindIindex(int[] array){
+        int resultIndex = -1;
+        for (int i = 0; i <array.length; i++) {
+            int sumLeft = 0, sumRight = 0;
+            for (int j = 0; j < array.length; j++) {
+                if (j < i) sumLeft += array[j];
+                if (j > i) sumRight += array[j];
+                if (sumLeft == sumRight) resultIndex = i;
+            }
+            sumLeft = 0;
+            sumRight = 0;
+        }
+        System.out.println("Индекс = " + resultIndex);
     }
 }

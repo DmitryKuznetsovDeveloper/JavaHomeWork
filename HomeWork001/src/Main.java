@@ -22,5 +22,11 @@ public class Main {
         //в обратном порядке.
         String message = "Добро пожаловать на курс по Java";
         MyMethods.ReverceArray(message);
+
+        //8)Написать программу, которая найдет индекс i для этого массива
+        //такой, что сумма элементов с индексами < i равна сумме
+        //элементов с индексами > i.
+        int[] array = new int[] {1,7,3,6,5,6};
+        MyMethods.FindIindex(array);
     }
 }
