@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
         //1) Вычислить сумма чисел от 1 до n
@@ -19,5 +17,10 @@ public class Main {
         //Требуется восстановить выражение до верного равенства.
         //Предложить хотя бы одно решение или сообщить, что его нет.
         MyMethods.SolutionExample("2? + ?5 = 69");
+
+        // 5) Во фразе "Добро пожаловать на курс по Java" переставить слова
+        //в обратном порядке.
+        String message = "Добро пожаловать на курс по Java";
+        MyMethods.ReverceArray(message);
     }
 }

@@ -43,4 +43,11 @@ public class MyMethods {
         }
         if (!flag) System.out.println("Решения нет =(");
     }
+
+    public static void ReverceArray(String message){
+        String[] array = message.split(" ");
+        for (int i = array.length - 1; i >= 0; i--) {
+            System.out.print(array[i] + " ");
+        }
+    }
 }
