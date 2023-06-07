@@ -21,4 +21,26 @@ public class MyMethods {
             }
         }
     }
+
+    public static boolean Validate(int first, int second , int result){
+        return first + second == result;
+    }
+    public static void SolutionExample(String expression){
+        String[] numbers = expression.split("=");
+        int resultExpression = Integer.parseInt(numbers[1].trim());
+        String[] leftExpression = numbers[0].trim().replaceFirst(" ","").replace("+","").split(" ");
+        boolean flag = false;
+        for (int i = 0; i < 10; i++) {
+            int first = Integer.parseInt(leftExpression[0].replace("?", String.valueOf(i)));
+            for (int j = 0; j < 10; j++) {
+                int second = Integer.parseInt(leftExpression[1].replace("?", String.valueOf(j)));
+                if(Validate(first,second,resultExpression)){
+                    System.out.println(first + " + " + second + " = " + resultExpression);
+                    flag = true;
+                    break;
+                }
+            }
+        }
+        if (!flag) System.out.println("Решения нет =(");
+    }
 }
