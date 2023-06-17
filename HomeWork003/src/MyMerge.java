@@ -1,11 +1,11 @@
 public class MyMerge {
-    public static void  mergeSort(int[] arr){
+    public static void  mergeSort(Integer[] arr){
         int n = arr.length;
         if (n == 1) return;
 
         int mid = n / 2;
-        int[] left = new int[mid];
-        int[] right = new int[n-mid];
+        Integer[] left = new Integer[mid];
+        Integer[] right = new Integer[n-mid];
 
         for (int i = 0; i < mid; i++) {
             left[i] = arr[i];
@@ -19,7 +19,7 @@ public class MyMerge {
         merge(arr, left, right);
     }
 
-    private static void merge(int[] arr, int[] left, int[] right) {
+    private static void merge(Integer[] arr, Integer[] left, Integer[] right) {
         int leftLenght = left.length, rightLenght = right.length;
         int i = 0, j = 0, indexResult = 0;
 
